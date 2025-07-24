@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Developer</title>
+    <title>Ibrohim Ibrohimov</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0a0a0a;
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -55,12 +55,12 @@
         }
 
         .profile-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.8);
             backdrop-filter: blur(20px);
-            border-radius: 20px;
+            border-radius: 12px;
             padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
             transform: translateY(20px);
             opacity: 0;
             animation: slideUp 1s ease-out forwards;
@@ -75,31 +75,49 @@
             }
         }
 
-        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 6s ease-in-out infinite;
+        }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
 
+        .avatar {
+            vertical-align: middle;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
         h1 {
-            color: white;
-            font-size: 2.5em;
+            color: #ffffff;
+            font-size: 2.2em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .title {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2em;
+            color: #888888;
+            font-size: 1.1em;
             margin-bottom: 30px;
             font-weight: 300;
         }
 
         .description {
-            color: rgba(255, 255, 255, 0.9);
+            color: #cccccc;
             line-height: 1.6;
             margin-bottom: 30px;
+            font-weight: 300;
         }
 
         .links {
@@ -113,46 +131,25 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
+            padding: 10px 20px;
+            background: transparent;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            font-weight: 300;
         }
 
         .link-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-1px);
         }
 
-        .skills {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.6);
-            animation: bounce 2s infinite;
+        .link-btn img {
+            width: 20px;
+            height: 20px;
         }
 
         @keyframes bounce {
@@ -166,12 +163,6 @@
             .profile-card { padding: 30px 20px; }
             .links { flex-direction: column; align-items: center; }
             .link-btn { width: 200px; justify-content: center; }
-        }
-        .avatar {
-            vertical-align: middle;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
         }
     </style>
 </head>
@@ -204,7 +195,7 @@
                     <img src="icons8-gmail-48.png" alt="Gmail"> Contact
                 </a>
             </div>
-
+        </div>
     </div>
 
     <script>

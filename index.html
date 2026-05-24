@@ -3,15 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>~</title>
+  <title>&#10216;&phi;|&psi;&#10217; — Ibrohim Ibrohimov</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
   <meta name="description" content="Personal website of Ibrohim Ibrohimov — interests, projects, and links." />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Ibrohim Ibrohimov" />
   <meta property="og:description" content="quantum computing, theory of quantum, quantum information and computation, quantum algorithms, quantum complexity theory • physics • math" />
   <meta property="og:type" content="website" />
-  <meta name="color-scheme" content="light" />
+  <!-- TODO: replace both URLs below with your real domain + a 1200x630 image you host -->
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/og-image.png" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ibrohim_quanta" />
+  <meta name="twitter:title" content="Ibrohim Ibrohimov" />
+  <meta name="twitter:description" content="quantum computing, theory of quantum, quantum information and computation, quantum algorithms, quantum complexity theory • physics • math" />
+  <meta name="twitter:image" content="https://example.com/og-image.png" />
+
+  <meta name="color-scheme" content="light dark" />
   <style>
     :root {
       --bg: #ffffff;
@@ -20,8 +34,20 @@
       --accent: #2563eb; /* blue-600 */
       --card: #f7f7f8;
       --border: #e5e7eb;
+      --link-hover: #111111;
     }
-    
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --text: #e8e8ea;
+        --muted: #9aa0a6;
+        --accent: #6ea8ff;
+        --card: #181b21;
+        --border: #2a2e36;
+        --link-hover: #ffffff;
+      }
+    }
 
     html, body { height: 100%; }
     body {
@@ -49,7 +75,11 @@
       font-weight: 700;
       font-size: 22px;
       letter-spacing: 0.3px;
+      margin: 0; /* reset default h1 margins */
+      line-height: 1.2;
     }
+    .brand a { color: inherit; text-decoration: none; }
+    .brand a:hover { color: inherit; }
 
     nav a {
       display: inline-block;
@@ -61,17 +91,21 @@
     nav a:first-child { margin-left: 0; }
     nav a:hover { color: var(--text); text-decoration: underline; }
 
-    main h1 {
-      font-size: 28px;
-      margin: 6px 0 10px;
-    }
-
     p { margin: 0 0 14px; }
 
     .muted { color: var(--muted); }
 
-    a { color: var(--accent); text-decoration:none;}
-    a:hover { color: #111111; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--link-hover); }
+
+    .interests { list-style: none; padding: 0; margin: 0 0 14px; }
+    .interests li { padding-left: 1.2em; position: relative; }
+    .interests li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
 
     .note {
       margin-top: 28px;
@@ -81,8 +115,10 @@
       border-radius: 10px;
       font-size: 16px;
     }
+    .note p { margin: 0 0 8px; }
+    .note cite { font-style: normal; }
 
-    footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+    h2 { font-size: 20px; margin-top: 28px; }
 
     /* tiny screens: let nav wrap nicely */
     @media (max-width: 520px) {
@@ -94,41 +130,41 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><a style="color:inherit; text-decoration:none;">Ibrohim Ibrohimov</a></div>
+      <h1 class="brand"><a href="/">Ibrohim Ibrohimov</a></h1>
       <nav aria-label="Primary">
-        <a href="https://statevector.org" target="_blank" rel="noopener noreferrer">articles</a>
+        <!-- <a href="https://statevector.org" target="_blank" rel="noopener noreferrer">articles</a> -->
         <a href="https://bsky.app/profile/ibrohim-ibrohimov.bsky.social" target="_blank" rel="noopener noreferrer">bluesky</a>
         <a href="https://x.com/ibrohim_quanta" target="_blank" rel="noopener noreferrer">twitter</a>
+        <a href="https://www.linkedin.com/in/ibrohim-ibrohimov/" target="_blank" rel="noopener noreferrer">linkedin</a>
         <a href="https://t.me/onequbit" target="_blank" rel="noopener noreferrer">telegram</a>
       </nav>
     </header>
 
     <main>
-      <p>welcome</p>
       <p>
-        I am a junior applied math at <a href="https://newuu.uz" target="_blank" rel="noopener noreferrer">NEWUU</a>.
+        applied math student at <a href="https://newuu.uz" target="_blank" rel="noopener noreferrer">NEWUU</a>.
       </p>
-      <p>
-        main interests: simulating nature with quantum computing, theory of quantum computing, quantum information and computation, quantum algorithms, quantum complexity theory.
-      </p>
-      <p>
-        I have confidence that quantum computing will enable us to understand nature at a fundamental level.
-      </p>
+
+      <p>main interests:</p>
+      <ul class="interests">
+        <li>quantum simulation</li>
+        <li>theory of quantum computing</li>
+        <li>quantum information and computation</li>
+        <li>quantum algorithms</li>
+      </ul>
 
       <blockquote class="note">
         <p>Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy.</p>
-        <footer class="muted" style="display: inline;">— Richard Feynman, 1981</footer>
+        <cite class="muted">— Richard Feynman, 1981</cite>
       </blockquote>
 
       <section id="books" aria-labelledby="books-title">
-        <h2 id="books-title" style="font-size:20px; margin-top:28px;">books</h2>
+        <h2 id="books-title">textbooks</h2>
         <ul>
+          <li><a href="https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview" target="_blank" rel="noopener noreferrer">Quantum Computation and Quantum Information</a> — Nielsen &amp; Chuang (aka bible of quantum information and computation)</li>
           <li><a href="https://www.thomaswong.net/introduction-to-classical-and-quantum-computing-1e4p.pdf" target="_blank" rel="noopener noreferrer">Introduction to Classical and Quantum Computing</a> — Thomas Wong</li>
-          <li><a href="https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview" target="_blank" rel="noopener noreferrer">Quantum Computation and Quantum Information</a> — Nielsen &amp; Chuang</li>
         </ul>
       </section>
-
-
     </main>
   </div>
 </body>
